@@ -1,11 +1,12 @@
 ---
-title: v2 API の有効化に伴う Azure Machine Learning Workspace への影響について
-date: 2022-05-18 00:00:00
+title: Azure CLI の Azure Machine Learning 拡張機能 v1 の廃止に伴う影響について
+date: 2025-04-10 00:00:00
 categories:
 - Azure Machine Learning
 tags:
-- v2 API
-- Private Endpoint
+- CLI
+- v1
+- deprecate
 ---
 件名 「Network Isolation Change with Our New API Platform on Azure Resource Manager」 の電子メールにて、Action Required to use new API platform with private link enabled workspace といった内容が通知されています。 このメールにおいて実際に必要な対応内容をお纏めして紹介します。  
 

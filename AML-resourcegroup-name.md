@@ -34,8 +34,8 @@ Azure Machine Learning サービスに閉じた機能であれば修正リクエ
 [Azure リソースの名前付け規則と制限事項 #Microsoft.MachineLearningServices](https://docs.microsoft.com/ja-jp/azure/azure-resource-manager/management/resource-name-rules#microsoftmachinelearningservices)  
 >| Entity | Scope | 長さ | 有効な文字 |
 >| :---- | :---- | :---- | :---- |
->| workspaces&nbsp;&nbsp;&nbsp; | resource group&nbsp;&nbsp;&nbsp; | 3-33&nbsp;&nbsp;&nbsp; | 英数字とハイフン。|
->| workspaces / computes&nbsp;&nbsp;&nbsp; | ワークスペース&nbsp;&nbsp;&nbsp; | 2-16&nbsp;&nbsp;&nbsp; | 英数字とハイフン。|
+>| workspaces | resource group | 3-33 | 英数字とハイフン。|
+>| workspaces / computes | ワークスペース | 2-16 | 英数字とハイフン。|
 
 
 

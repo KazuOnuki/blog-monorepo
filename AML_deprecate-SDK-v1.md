@@ -1,23 +1,32 @@
 ---
-title: v2 API の有効化に伴う Azure Machine Learning Workspace への影響について
-date: 2022-05-18 00:00:00
+title: Azure Machine Learning SDK v1 の廃止に伴い発生するアクションについて
+date: 2025-04-10 00:00:00
 categories:
 - Azure Machine Learning
 tags:
-- v2 API
-- Private Endpoint
+- SDK
+- v1
+- deprecate
 ---
-件名 「Network Isolation Change with Our New API Platform on Azure Resource Manager」 の電子メールにて、Action Required to use new API platform with private link enabled workspace といった内容が通知されています。 このメールにおいて実際に必要な対応内容をお纏めして紹介します。  
-
-(注意) 本情報は適宜調整しております。併せて下記公式サイトをご参照ください。  
-- [Network Isolation Change with Our New API Platform on Azure Resource Manager](http://aka.ms/amlv2network)
+件名 「Action required: Migrate to Azure Machine Learning SDK version 2 before 30 June 2026 (日本語版 - アクションが必要です：2026年6月30日までに、Azure Machine Learning SDK バージョン2 に移行してください。)」 の電子メールにて通知されている内容について、必要なアクションをご紹介させていただきます。  
 
 <!-- more -->
 <br>
 
 ***
-## v2 API とは
-Azure Machine Learning サービスで使用される API は、Azure Resource Manager (以下、ARM) 宛に要求を発行するもの、ワークスペース リソース宛に要求を発行するものの 2 種類が存在します。 これまでの API (v1 API) は、ワークスペースやコンピューティング リソースに対する操作以外は基本的にワークスペース宛に要求を送っていました。 新しい API (v2 API) では、それらの多くが ARM 宛に要求を送る様に変更されます。  
+## Azure Machine Learning SDK v1 および v2 について
+
+Azure Machine Learning サービスでは 2025 年 4 月現在、[SDK v1](https://learn.microsoft.com/en-us/azure/machine-learning/introduction?view=azureml-api-1#sdk-v1) および [SDK v2](https://learn.microsoft.com/ja-jp/python/api/overview/azure/machine-learning?view=azure-python) を使用した開発をサポートしています。それぞれ概ね同様の操作を実行することが可能ですが、使用される API は異なるため互換性は無く、SDK v1 は新機能に対応していないなど
+
+- [Azure Machine Learning SDK & CLI (v1)](https://learn.microsoft.com/en-us/azure/machine-learning/introduction?view=azureml-api-1)  
+
+- [What is Azure Machine Learning CLI and Python SDK v2?](https://learn.microsoft.com/en-us/azure/machine-learning/concept-v2?view=azureml-api-2)  
+
+
+
+
+
+SDK は、Azure Resource Manager (以下、ARM) 宛に要求を発行するもの、ワークスペース リソース宛に要求を発行するものの 2 種類が存在します。 これまでの API (v1 API) は、ワークスペースやコンピューティング リソースに対する操作以外は基本的にワークスペース宛に要求を送っていました。 新しい API (v2 API) では、それらの多くが ARM 宛に要求を送る様に変更されます。  
 
 > | API バージョン | ARM 宛の操作 | Workspace 宛の操作 |
 > | :---- | :---- | :---- |
