@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { root, selectSites } = require('./sites');
+const { root, sites, selectSites } = require('./sites');
 
 function listPublicPaths(directory) {
   const results = [];
@@ -17,17 +17,18 @@ function listPublicPaths(directory) {
   return results.sort();
 }
 
-const sourceRoot = process.argv.includes('--source')
-  ? path.resolve(process.argv[process.argv.indexOf('--source') + 1])
-  : path.resolve(root, '..', 'hexo');
-const siteArgs = process.argv.slice(2).filter((arg, index, args) =>
-  !args.includes('--source') || (arg !== '--source' && index !== args.indexOf('--source') + 1)
+const sourceIndex = process.argv.indexOf('--legacy-root');
+const legacyRoot = sourceIndex >= 0 ? path.resolve(process.argv[sourceIndex + 1]) : null;
+const siteArgs = process.argv.slice(2).filter((arg, index) =>
+  sourceIndex < 0 || (arg !== '--legacy-root' && index + 2 !== sourceIndex + 1)
 );
 const outputRoot = path.join(root, 'baselines');
 fs.mkdirSync(outputRoot, { recursive: true });
 
 for (const siteName of selectSites(siteArgs)) {
-  const source = path.join(sourceRoot, `${siteName}.github.io`, '.deploy_git');
+  const source = legacyRoot
+    ? path.join(legacyRoot, `${siteName}.github.io`, '.deploy_git')
+    : path.join(root, sites[siteName].output);
   const paths = listPublicPaths(source);
   fs.writeFileSync(path.join(outputRoot, `${siteName}.txt`), `${paths.join('\n')}\n`);
   console.log(`${siteName}: captured ${paths.length} public paths`);
