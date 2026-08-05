@@ -2,9 +2,9 @@
 
 This repository is the unified source for four existing GitHub Pages sites. Public URLs and deployment repositories remain unchanged.
 
-Central repository: `https://github.com/japan-support-blogs/blog-monorepo`
+Central repository: `https://github.com/japan-ai-support-blogs/blog-monorepo`
 
-The `japan-support-blogs` organization uses existing GitHub accounts as owners; it does not require a separate login or email address.
+The `japan-ai-support-blogs` organization uses existing GitHub accounts as owners; it does not require a separate login or email address.
 
 | Site key | Content | Public site | Deployment repository |
 |---|---|---|---|
