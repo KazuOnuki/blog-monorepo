@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <%
+    var title = page.title;
+    if (is_archive()) {
+      title = 'Archives';
+      if (is_month())
+        title += ': ' + page.year + '/' + page.month;
+      else if (is_year())
+        title += ': ' + page.year;
+    }
+    else if (is_category())
+      title = 'Category: ' + page.category;
+    else if (is_tag())
+      title = 'Tag: ' + page.tag;
+  %>
+  <title><% if (title) { %><%= title %> | <% } %><%= config.title %></title>
+  <meta name="description" content="<%= config.description %>" />
+  <meta name="keywords" content="<%=(config.keywords||[]).join(',') %>" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="icon" href="<%= theme.favicon.base_url %>/favicon.ico">
+  <link rel="apple-touch-icon" sizes="<%= theme.favicon.apple_touch_size %>" href="<%= theme.favicon.base_url %>/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="<%= theme.favicon.base_url %>/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="<%= theme.favicon.base_url %>/favicon-16x16.png">
+  <link rel="manifest" href="<%= theme.favicon.base_url %>/site.webmanifest">
+  <link rel="mask-icon" href="<%= theme.favicon.base_url %>/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#00aba9">
+  <meta name="theme-color" content="#ffffff">
+  <%- feed_tag(config.feed.path, {title: config.title}) %>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <%- open_graph({
+    twitter_id: theme.twitter,
+    google_plus: theme.google_plus, 
+    fb_admins: theme.fb_admins, 
+    fb_app_id: theme.fb_app_id}) %>
+    
+  <link href='https://cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.5/waves.min.css' integrity="sha384-ckDmEDvQUsNyHnS8/myY7d25amEgu2t11KCsKttB2bMX8k5tCj/j7UBLm7fEp7zV" crossorigin="anonymous" rel='stylesheet'>
+  <%- css('style.css') %>
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+  <meta name="google-site-verification" content="pWQqMJ7gh1mrMlGHKKrGh0r1IqaWrJc1dWnZowSZW-c" />
+</head>

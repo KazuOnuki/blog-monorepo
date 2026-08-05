@@ -1,0 +1,13 @@
+<section class='m_widget about'>
+<img class='avatar waves-image' src="<%= theme.about.avatar %>" alt="">
+<% if (theme.about.show_author) { %>
+<div class='header'><%= config.author %></div>
+<% } %>
+<div class='content'>
+<div class='desc'>
+    <%= theme.about.description %></br></br>
+    Powered by: <%= theme.powered_by %></br></br>
+    Web master: <%= theme.about.web_master %>
+</div>
+</div>
+</section>
