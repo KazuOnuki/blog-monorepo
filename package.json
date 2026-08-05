@@ -14,6 +14,7 @@
     "capture:baseline": "node tools/capture-baseline.js",
     "verify:urls": "node tools/verify-urls.js",
     "verify:links": "node tools/verify-links.js",
+    "import:legacy": "node tools/import-legacy.js",
     "sync:mirrors": "node tools/sync-mirrors.js"
   },
   "hexo": {

@@ -39,6 +39,7 @@ npm run build                         # Build all sites
 npm run build:ai                      # Build one site
 npm run serve -- jpmlblog             # Preview one site
 npm run verify:urls                   # Verify all public paths
+npm run import:legacy -- jpaiblog     # Recover an accidental legacy edit
 npm run sync:mirrors                  # Update the four legacy source clones
 npm run deploy -- jpaiblog            # Deploy one existing site
 npm run deploy                        # Deploy all four existing sites
@@ -56,6 +57,21 @@ npm run deploy                        # Deploy all four existing sites
 6. Deploy from the monorepo.
 
 The legacy repositories are mirrors after migration. Do not edit them directly once a central remote for this monorepo has been established.
+
+### If a legacy repository is edited accidentally
+
+Do not run mirror synchronization immediately. A legacy change does not automatically update this monorepo, and synchronization would otherwise restore the monorepo version.
+
+```powershell
+git status                            # The monorepo must be clean
+npm run import:legacy -- jpaiblog     # Pull legacy master through git subtree
+npm run build
+npm run verify:urls
+git push origin main
+npm run sync:mirrors
+```
+
+`sync:mirrors` fetches every legacy remote before writing. It refuses to continue when a mirror is dirty, ahead, behind, diverged, or changed since its last synchronized content hash.
 
 ## Compatibility repairs
 

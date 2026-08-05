@@ -7,25 +7,29 @@ const sites = {
     content: 'content/jpaiblog.github.io',
     config: 'sites/jpaiblog/_config.yml',
     output: 'dist/jpaiblog',
-    sourceRepository: 'jpaiblog.github.io'
+    sourceRepository: 'jpaiblog.github.io',
+    sourceRemote: 'https://github.com/jpaiblog/jpaiblog.github.io.git'
   },
   jpiotblog: {
     content: 'content/jpiotblog.github.io',
     config: 'sites/jpiotblog/_config.yml',
     output: 'dist/jpiotblog',
-    sourceRepository: 'jpiotblog.github.io'
+    sourceRepository: 'jpiotblog.github.io',
+    sourceRemote: 'https://github.com/jpiotblog/jpiotblog.github.io.git'
   },
   jpmlblog: {
     content: 'content/jpmlblog.github.io',
     config: 'sites/jpmlblog/_config.yml',
     output: 'dist/jpmlblog',
-    sourceRepository: 'jpmlblog.github.io'
+    sourceRepository: 'jpmlblog.github.io',
+    sourceRemote: 'https://github.com/jpmlblog/jpmlblog.github.io.git'
   },
   jpwdkblog: {
     content: 'content/jpwdkblog.github.io',
     config: 'sites/jpwdkblog/_config.yml',
     output: 'dist/jpwdkblog',
-    sourceRepository: 'jpwdkblog.github.io'
+    sourceRepository: 'jpwdkblog.github.io',
+    sourceRemote: 'https://github.com/jpwdkblog/jpwdkblog.github.io.git'
   }
 };
 
