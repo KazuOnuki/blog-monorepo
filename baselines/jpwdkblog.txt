@@ -20,6 +20,7 @@
 2026/02/05/wfp_calloutr_driver_part1/index.html
 2026/04/02/wfp_calloutr_driver_part2/index.html
 2026/04/08/psa-virtualprinter-checklist/index.html
+2026/08/31/w11_26h1_arm64_extescape_output_buffer_issue/index.html
 archives/2020/01/index.html
 archives/2020/07/index.html
 archives/2020/08/index.html
@@ -41,6 +42,7 @@ archives/2025/index.html
 archives/2026/01/index.html
 archives/2026/02/index.html
 archives/2026/04/index.html
+archives/2026/08/index.html
 archives/2026/index.html
 archives/index.html
 archives/page/2/index.html
@@ -53,6 +55,7 @@ categories/Windows-Driver-Kit-全般/index.html
 categories/Windows-PE/index.html
 categories/hlk/index.html
 categories/printscan/index.html
+categories/printscan/page/2/index.html
 content.json
 favicon/android-chrome-192x192.png
 favicon/android-chrome-384x384.png
@@ -86,9 +89,11 @@ search.xml
 sitemap.xml
 sitemap.xsl
 style.css
+tags/ARM64/index.html
 tags/CPrintDialog/index.html
 tags/Debug/index.html
 tags/Driver/index.html
+tags/ExtEscape/index.html
 tags/IOCTL/index.html
 tags/Network/index.html
 tags/UMDF/index.html
@@ -97,6 +102,7 @@ tags/WFP/index.html
 tags/WIA/index.html
 tags/Windows-10/index.html
 tags/Windows-11-24H2/index.html
+tags/Windows-11-26H1/index.html
 tags/Windows-11-HLK/index.html
 tags/Windows-11/index.html
 tags/Windows-Server-2025/index.html
@@ -104,6 +110,7 @@ tags/bug/index.html
 tags/devmode/index.html
 tags/install/index.html
 tags/print/index.html
+tags/printer-driver/index.html
 tags/printer/index.html
 tags/test/index.html
 tags/はじめに/index.html
